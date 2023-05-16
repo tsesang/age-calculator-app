@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,600;1,700&family=Roboto:wght@100;300;700&display=swap"
+        rel="stylesheet">
+</head>
+<style>
+    body {
+        width: 100%;
+        height: 100vh;
+        background-color: rgb(106, 65, 159);
+        display: grid;
+        place-items: center;
+        font-family: 'Poppins', sans-serif;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    * {
+        box-sizing: border-box;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .container {
+        width: 50%;
+        height: 75vh;
+        background-color: white;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        padding: 20px;
+        border-radius: 20px;
+        border-bottom-right-radius: 25%;
+        padding-left: 40px;
+    }
+
+    .uppercase {
+        text-transform: uppercase;
+    }
+
+    .container>div:first-child {
+        grid-column: 1/-1;
+        display: grid;
+        place-items: center;
+        grid-template-columns: repeat(4, 1fr);
+        padding: 40px;
+        padding-left: 0px;
+    }
+
+    .container>div:first-child form label {
+        display: block;
+    }
+
+
+    .input {
+        margin-top: 0.4rem;
+        padding: 0.5rem;
+        padding-left: 1.2rem;
+        border-radius: 5px;
+        border: 1px solid rgb(202, 200, 200);
+        font-size: 23px;
+        width: 8rem;
+    }
+
+    .fs {
+        font-size: .7rem;
+        font-weight: 700;
+        color: rgb(117, 118, 118);
+        letter-spacing: 2.5px;
+    }
+
+    input[type="number"] {
+        -moz-appearance: textfield;
+    }
+
+    input::placeholder {
+        font-weight: 700;
+    }
+
+    .second {
+        grid-row: 2/-1;
+        grid-column: 1/-2;
+        border-top: 1px solid rgb(202, 200, 200);
+        padding-top: 40px;
+        padding-left: 10px;
+        line-height: 4.5rem;
+    }
+
+    .second>div span {
+        font-family: poppins;
+        font-size: 6rem;
+        font-weight: 900;
+        font-style: italic;
+        color: rgb(162, 113, 226);
+        margin-right: 10px;
+    }
+
+    .second>div h1 {
+        font-family: poppins;
+        font-size: 6rem;
+        font-style: italic;
+        font-weight: 700;
+    }
+
+    .second>div h1 {
+        display: inline;
+    }
+
+    button {
+        background-color: black;
+        padding:15px 30px;
+        font-size: 1.2rem;
+        position: relative;
+        top: -20px;
+        letter-spacing: 2px;
+        right: 40px;
+        cursor: pointer;
+        color: white;
+        border-radius: 10px;
+    }
+
+    button:hover {
+        background-color: rgb(162, 113, 226);
+    }
+
+    button img {
+        height: 100px;
+        width: 100px;
+        object-fit: cover;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="first">
+            <form><label class="uppercase fs" for="">day</label>
+                <input class="input" id="input_day" type="number" placeholder="DD" required>
+            </form>
+            <form><label class="uppercase fs" for="">month</label>
+                <input class="input" id="input_month" type="number" placeholder="MM" required>
+            </form>
+            <form><label class="uppercase fs" for="">year</label>
+                <input class="input" id="input_year" type="number" placeholder="YY" required>
+            </form>
+        </div>
+
+        <div class="second">
+            <div>
+                <span id="year">--</span>
+                <h1 class="">years</h1>
+            </div>
+            <div>
+                <span id="month">--</span>
+                <h1 class="">month</h1>
+            </div>
+            <div>
+                <span id="day">--</span>
+                <h1 class="">days</h1>
+            </div>
+        </div>
+        <div>
+            <button id="button" class="uppercase button">
+                calculate
+            </button>
+        </div>
+    </div>
+
+    <script src="./age-calculator-app-main/script.js">
+
+    </script>
+
+</body>
+
+</html>
